@@ -1,8 +1,6 @@
 # Docker - PDNS Recursor
 ## Description
-This is a image that builds an Alpine Linux container, and installs pdns-recursor. 
-
-This image uses a pre-built recursor.conf to provide out-of-the-box functionaility.
+This is a image that builds an Alpine Linux container, and installs pdns-recursor. This image avoids the need to have a ready-made recursor.conf as to out-of-the-box functionaility, while providing the same level of customisation that including your own recursor.coinf brings.
 
 The following configuration is baked into this image:
 
@@ -17,6 +15,8 @@ include-dir=/etc/pdns/recursor.conf.d/
 ```
 
 This configuration can be overwritten/appended to by mounting a configuration directory holding `*.conf` files, to `/etc/pdns/recursor.conf.d/`
+
+The webserver is enabled by default as so metrics can be scraped with no further configuration. However, the API will need a password configuring, and appended to a conf file inside the aforementioned configuration directory mount. This is accessible by default on `0.0.0.0:8082`
 
 Alternatively, the `recursor.conf` inside the `src` directory can be modified, and a new image can be built by renaming `docker-compose.yml.build` to `docker-compose.yml`, and then running `docker-compose build`.
 
