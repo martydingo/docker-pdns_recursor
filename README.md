@@ -6,7 +6,7 @@ This image uses a pre-built recursor.conf to provide out-of-the-box functionaili
 
 The following configuration is baked into this image:
 
-```
+```conf
 daemon=no
 local-address=0.0.0.0
 webserver=yes
@@ -23,7 +23,7 @@ Alternatively, the `recursor.conf` inside the `src` directory can be modified, a
 ## Usage
 To run this image, use the included docker-compose.yml and modify to your requirements.
 
-```
+```yaml
 services:
   pdns_recursor:
     image: martydingo/pdns-recursor:latest
