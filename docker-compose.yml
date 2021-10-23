@@ -1,0 +1,9 @@
+services:
+  recursor:
+    image: martydingo/pdns-recursor:latest
+    ports:
+      - 53:53
+      - 53:53/udp
+      - 8082:8082
+    volumes:
+      - <path_to_config>:/etc/pdns/recursor.conf.d/
