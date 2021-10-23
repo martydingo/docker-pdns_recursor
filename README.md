@@ -1,6 +1,6 @@
 # Docker - PDNS Recursor
 ## Description
-This is a image that builds an Alpine Linux container, and installs pdns-recursor. This image avoids the need to have a ready-made recursor.conf as to out-of-the-box functionaility, while providing the same level of customisation that including your own recursor.coinf brings.
+This is a image that builds an Alpine Linux container, and installs pdns-recursor. This image avoids the need to have a ready-made recursor.conf as to out-of-the-box functionaility, while providing the same level of customisation that including your own recursor.conf brings.
 
 The following configuration is baked into this image:
 
